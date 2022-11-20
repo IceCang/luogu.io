@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>luogu.io</title>
+        <script src="js/libs/jquery.js"></script>
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="status-container">加载中...</div>
+        <canvas id="canvas"></canvas>
+        <script>
+            function isBroserSupportedCanvas(){
+                var canvas = document.createElement("canvas");
+                if(!canvas||!canvas.getContext)return false;
+                return true;
+            }
+
+            (function(window, document){
+                if(!isBroserSupportedCanvas()){
+
+                }
+
+                var clientScript = document.createElement("script");
+                clientScript.async=true;
+                clientScript.type="text/javascript";
+                clientScript.onerror=function(){setTimeout(function(){window.location.reload(true)},500)};
+                clientScript.onload=function(){};
+                clientScript.src="js/client/client.js";
+                var node=document.getElementsByTagName("script")[0];
+                node.parentNode.insertBefore(clientScript,node);
+            })(window, document);
+        </script>
+    </body>
+</html>

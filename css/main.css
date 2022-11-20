@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(fonts/4iCv6KVjbNBYlgoCxCvjsGyNPYZvgw.woff2);
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.status-container {
+    color:#FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: default;
+    text-align: center;
+}
+
+html{
+    font-family: 'Ubuntu';
+}
+
+body{
+    background-color: black;
+}
